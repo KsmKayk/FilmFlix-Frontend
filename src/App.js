@@ -52,6 +52,25 @@ function App() {
           loop={true}
           slidesPerView={3}
           className="container1-swiper"
+          breakpoints={{
+            306: {
+              slidesPerView: 1,
+              spaceBetween: 40,
+            },
+
+            520: {
+              slidesPerView: 1,
+            },
+            800: {
+              slidesPerView: 3,
+            },
+            1136: {
+              slidesPerView: 4,
+            },
+            1300: {
+              slidesPerView: 5,
+            },
+          }}
         >
           {filmData.titleName.map((name, i) => (
             <SwiperSlide>
@@ -134,7 +153,7 @@ function App() {
       if (pageStatus === 2) {
         return (
           <>
-            <h2 className="container1-title">{film.title}</h2>
+            <h2 className="container3-title">{film.title}</h2>
             <div className="container3">
               <iframe
                 title={film.title}
